@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "micinema"
+    }
+  },
+  "defaultProject": "micinema",
+  "cli": {
+    "analytics": false
+  }
 }

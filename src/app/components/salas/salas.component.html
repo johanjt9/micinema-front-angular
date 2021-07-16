@@ -1,0 +1,40 @@
+<div class="container">
+    <br>
+    <div class="row">
+        <h3>Listado de Salas de cine</h3>
+        <div class="col-md-6">
+            <div class="form-group text-center">
+                <a href="micinema/salascreate" class="btn btn-success" role="button" aria-pressed="true">Crear sala</a>
+            </div>
+        </div>
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Sucursal</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Ciudad</th>
+                <th scope="col">Tipo de sala</th>
+                <th scope="col">Fecha Creación</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let sala of salas;">
+                    <th scope="row">{{ sala.id }}</th>
+                    <td>{{ sala.sucursal.nombreSucursal }}</td>
+                    <td>{{ sala.sucursal.direccion }}</td>
+                    <td>{{ sala.sucursal.ciudad }}</td>
+                    <td>{{ sala.tipoSalas.descripcion }}</td>
+                    <td>{{ sala.fechaRegistro }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-12">
+            <div class="form-group text-center">
+                <a href="micinema" class="btn btn-danger" role="button" aria-pressed="true">Volver</a>
+            </div>
+        </div>
+    </div>
+  </div>

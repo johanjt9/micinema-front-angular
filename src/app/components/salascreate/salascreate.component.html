@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 animate-box">
+            <h3>Creación de salas</h3>
+            <br>
+        </div>
+        <div class="col-md-10 col-md-offset-1 animate-box">
+            <form [formGroup]="form" (ngSubmit)="saveProduct($event)">
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label for="fname">Sucursal</label>
+                        <select formControlName="idSucursal" name="people" id="people" class="form-control">
+                            <option value="">Seleccione la sucursal</option>
+                            <option *ngFor="let sucursal of sucursales" value="{{ sucursal.id }}">{{ sucursal.nombreSucursal }}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="fname">Tipo de sala</label>
+                        <select formControlName="idTipoSala" name="people" id="people" class="form-control">
+                            <option value="">Seleccione el tipo de sala</option>
+                            <option *ngFor="let tipoSal of tipoSala" value="{{ tipoSal.id }}">{{ tipoSal.nombre }}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label for="fname">Numero de filas</label>
+                        <select formControlName="nfila" name="people" id="people" class="form-control" >
+                            <option value="">Seleccione el tipo de sala</option>
+                            <option *ngFor="let in of cantidads ;let i = index" value="{{ i+1 }}">{{ i+1 }}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="fname">Numero de sillas</label>
+                        <select formControlName="nsilla" name="people" id="people" class="form-control">
+                            <option value="">Seleccione el tipo de sala</option>
+                            <option *ngFor="let in of sillas ;let i = index" value="{{ i+1 }}">{{ i+1 }}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <div class="form-group text-center">
+                            <input type="submit" value="Registrar" class="btn btn-primary">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group text-center">
+                            <a href="micinema/salas" class="btn btn-danger" role="button" aria-pressed="true">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </form>		
+        </div>
+    </div>
+</div>
